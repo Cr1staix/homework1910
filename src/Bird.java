@@ -14,7 +14,7 @@ public class Bird extends Animal {
     }
 
     /**
-     * Метод для воспроизведения звука, который издает птица
+     * Метод для воспроизведения звука, который издает птица.
      */
     @Override
     public void makeSound() {
@@ -22,12 +22,25 @@ public class Bird extends Animal {
     }
 
     /**
-     * Метод описывает вкусовые предпочтения птицы
+     * Метод описывает вкусовые предпочтения птицы.
      */
     @Override
     public void eat() {
         System.out.println("Есть шо по пшену?");
     }
+
+    /**
+     * Метод описывает способ передвижения птицы.
+     */
+    @Override
+    public void move() {
+        if(canFly){
+            System.out.println("Птица летает");
+        }else {
+            System.out.println("Птица не летает");
+        }
+    }
+
 
     @Override
     public String toString() {

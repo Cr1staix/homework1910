@@ -1,7 +1,7 @@
 /**
- * Создает объект класса Animal. Класс является суперклассом для всех видов животных
+ * Абстрактный класс Animal. Класс является суперклассом для всех видов животных
  */
-public class Animal {
+public abstract class  Animal {
     private String name;
 
     public Animal(String name) {
@@ -17,18 +17,21 @@ public class Animal {
     }
 
     /**
-     * Метод для воспроизведения звука, который издает животное
+     * Абстрактный метод для реализации воспроизведения звуков животных.
      */
-    public void makeSound() {
-        System.out.println("Животное издает звук");
-    }
+    public abstract void makeSound();
+
 
     /**
-     * Метод описывает вкусовые предпочтения животного
+     * Абстрактный метод для описания вкусовых предпочтений животных.
      */
-    public void eat() {
-        System.out.println("Что-то ест");
-    }
+    public abstract void eat();
+
+    /**
+     * Абстрактный метод для реализации передвижения животных.
+     */
+    public abstract void move();
+
 
     @Override
     public String toString() {
