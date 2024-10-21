@@ -5,12 +5,19 @@ public class Main {
         Animal[] animals = {
                 new Dog("Шарик"),
                 new Cat("Мурзик"),
-                new Bird("Кеша", true)
+                new Bird("Кеша", true),
+                new Bird("Гоша", false)
         };
 
         for (Animal animal : animals) {
+            if (animal instanceof Pet) {
+                ((Pet) animal).play();
+                ((Pet) animal).beFriendly();
+            }
             animal.makeSound();
             animal.eat();
+            animal.move();
+            System.out.println(" ");
         }
 
         Dog dog1 = new Dog("Аркадий");
@@ -28,8 +35,10 @@ public class Main {
         Bird bird1 = new Bird("Гоша", true);
         bird1.makeSound();
         System.out.println(bird1);
+        bird1.move();
         Bird bird2 = new Bird("Ряба", false);
         bird2.makeSound();
         System.out.println(bird2);
+        bird2.move();
     }
 }
