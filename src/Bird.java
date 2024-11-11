@@ -1,7 +1,7 @@
 /**
  * Создает объект класса Bird. Класс является наследником суперкласса Animal
  */
-public class Bird extends Animal {
+public final class Bird extends Animal {
     private boolean canFly;
 
     public Bird(String name, boolean canFly) {
